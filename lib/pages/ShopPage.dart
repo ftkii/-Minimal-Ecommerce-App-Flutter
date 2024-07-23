@@ -15,7 +15,6 @@ class Shoppage extends StatefulWidget {
 
 class _ShoppageState extends State<Shoppage> {
   // add shoes to cart method
-//مافهمت ذا
   addShoeToCart(Shoes shoe) {
     Provider.of<Cart>(context, listen: false).addItemToCart(shoe);
 

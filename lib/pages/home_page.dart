@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = [
     //shop page
-      Shoppage(),
+      const Shoppage(),
     //cart page
     const Cartpage()
   ];
@@ -72,8 +72,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 //other pages
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
+                const Padding(
+                  padding: EdgeInsets.only(left: 25.0),
                   child: ListTile(
                     title: Text(
                       "Home",
@@ -85,8 +85,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
+                const Padding(
+                  padding: EdgeInsets.only(left: 25.0),
                   child: ListTile(
                     title: Text(
                       "About",
@@ -100,8 +100,8 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 25.0, bottom: 25),
+            const Padding(
+              padding: EdgeInsets.only(left: 25.0, bottom: 25),
               child: ListTile(
                 title: Text(
                   "Logout",

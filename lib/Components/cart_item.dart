@@ -3,6 +3,7 @@ import 'package:ec_app/models/shoes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+// ignore: must_be_immutable
 class CartItem extends StatefulWidget {
   Shoes shoe;
   CartItem({super.key, required this.shoe});
@@ -20,7 +21,7 @@ class _CartItemState extends State<CartItem> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
           color: Colors.grey[100], borderRadius: BorderRadius.circular(12)),
       child: ListTile(
@@ -28,7 +29,7 @@ class _CartItemState extends State<CartItem> {
         title: Text(widget.shoe.name),
         subtitle: Text(widget.shoe.price),
         trailing:
-            IconButton(onPressed: removeItemFromCart, icon: Icon(Icons.delete)),
+            IconButton(onPressed: removeItemFromCart, icon: const Icon(Icons.delete)),
       ),
     );
   }

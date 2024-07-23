@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:ec_app/Components/shoes_tile.dart';
 import 'package:ec_app/models/cart.dart';
 import 'package:ec_app/models/shoes.dart';
@@ -5,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class Shoppage extends StatefulWidget {
-  Shoppage({super.key});
+  const Shoppage({super.key});
 
   @override
   State<Shoppage> createState() => _ShoppageState();
@@ -20,7 +22,7 @@ class _ShoppageState extends State<Shoppage> {
     //alter the user , shoes successflly added
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (context) => const AlertDialog(
         title: Text("Successfully added! "),
         content: Text("Check your cart"),
       ),
@@ -40,7 +42,7 @@ class _ShoppageState extends State<Shoppage> {
               child: Expanded(
                 child: TextFormField(
                   decoration: InputDecoration(
-                    suffixIcon: Icon(Icons.search),
+                    suffixIcon: const Icon(Icons.search),
                     hintText: "  Search",
                     border: InputBorder.none,
                     filled: true,
@@ -87,11 +89,11 @@ class _ShoppageState extends State<Shoppage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             //List of shoes
-            Container(
+            SizedBox(
               height: 350,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
@@ -107,7 +109,7 @@ class _ShoppageState extends State<Shoppage> {
                 },
               ),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(top: 25, left: 25, right: 25),
               child: Divider(
                 color: Colors.white,

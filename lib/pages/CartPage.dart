@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:ec_app/Components/cart_item.dart';
 import 'package:ec_app/models/cart.dart';
 import 'package:ec_app/models/shoes.dart';
@@ -16,14 +18,14 @@ class Cartpage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //heading
-            Text(
+            const Text(
               "My Cart",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 24,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(

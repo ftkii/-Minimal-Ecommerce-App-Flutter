@@ -15,20 +15,20 @@ class IntroPage extends StatelessWidget {
             Container(
               height: 100,
               width: 100,
-              margin: EdgeInsets.only(top: 200),
+              margin: const EdgeInsets.only(top: 200),
               child: Image.asset("images/nike_logo.png"),
             ),
             //title
-            SizedBox(
+            const SizedBox(
               height: 150,
             ),
-            Text(
+            const Text(
               "Just Do It",
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             //subtitle
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Text(
@@ -42,15 +42,15 @@ class IntroPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.black,
               ),
-              margin: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+              margin: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
               child: MaterialButton(
-                padding: EdgeInsets.symmetric(vertical: 20),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => HomePage()));
+                      MaterialPageRoute(builder: (context) => const HomePage()));
                 },
-                child: Text("Shope Now"),
                 textColor: Colors.white,
+                child: const Text("Shope Now"),
               ),
             )
           ],

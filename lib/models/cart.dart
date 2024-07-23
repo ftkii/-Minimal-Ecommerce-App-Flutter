@@ -4,6 +4,7 @@ import 'shoes.dart';
 
 class Cart extends ChangeNotifier {
   //list of shoes for sale
+  // ignore: non_constant_identifier_names
   List<Shoes> ShoeShop = [
     Shoes(
         name: "shoes one",

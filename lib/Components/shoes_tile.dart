@@ -12,7 +12,7 @@ class Shoestile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 25),
+      margin: const EdgeInsets.only(left: 25),
       width: 280,
       decoration: BoxDecoration(
         color: Colors.grey[100],
@@ -23,11 +23,11 @@ class Shoestile extends StatelessWidget {
         children: [
           //shoes pic
           ClipRRect(
+            borderRadius: BorderRadius.circular(12),
             child: Image.asset(
               shoe.imagepath,
               height: 250,
             ),
-            borderRadius: BorderRadius.circular(12),
           ),
 
           //description
@@ -50,16 +50,17 @@ class Shoestile extends StatelessWidget {
                     //shoes name
                     Text(
                       shoe.name,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5,
                     ),
                     //price
                     Text(
+                      // ignore: prefer_interpolation_to_compose_strings
                       '\$' + shoe.price,
                       style: TextStyle(color: Colors.grey[600]),
                     ),
@@ -71,17 +72,17 @@ class Shoestile extends StatelessWidget {
               GestureDetector(
                 onTap: onTap,
                 child: Container(
-                  padding: EdgeInsets.all(20),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
-                  decoration: BoxDecoration(
+                  padding: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
                     color: Colors.black,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(12),
                       bottomRight: Radius.circular(12),
                     ),
+                  ),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
                   ),
                 ),
               )
